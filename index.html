@@ -4,31 +4,53 @@
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Coffee!</h1>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+    <span class="border-bottom d-flex justify-content-center">
+        <h1>Coffee!</h1>
+    </span>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+
+<!--&lt;!&ndash; FORM element &ndash;&gt;-->
+<!--    <form>-->
+<!--        <label for="roast-selection"></label>-->
+<!--        &lt;!&ndash; Drop down SELECT element with 3 options &ndash;&gt;-->
+<!--        <select id="roast-selection">-->
+<!--            <option>light</option>-->
+<!--            <option>medium</option>-->
+<!--            <option>dark</option>-->
+<!--        </select>-->
+<!--        <label for="coffees-name">Coffee Name</label>-->
+<!--        <input type="text" for="coffees-name" placeholder="coffee" id="coffees-name">-->
+<!--&lt;!&ndash;        <input id="submit" type="submit"/>&ndash;&gt;-->
+<!--        <button id="submit-button" type="submit-button" class="btn btn-primary">Submit</button>-->
+<!--    </form>-->
+
+    <div class="mt-5 form-row">
+        <div id="coffees" class="form-group col-md-6"></div>
+        <!-- FORM element -->
+        <div class="form-group col-md-6">
+            <form>
+                <label for="roast-selection"></label>
+                <!-- Drop down SELECT element with 3 options -->
+                <select id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="coffees-name">Coffee Name</label>
+                <input type="text" for="coffees-name" placeholder="coffee" id="coffees-name">
+                <!--        <input id="submit" type="submit"/>-->
+                <button id="submit-button" type="submit-button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
 
     <script src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 </html>

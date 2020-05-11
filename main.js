@@ -1,22 +1,23 @@
 "use strict"
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    var html = '<div class="coffee">';
+    // html += coffee.id;
+    html += '<strong>' + coffee.name + '</strong>';
+    html += coffee.roast;
+    html += '</div>';
 
     return html;
 }
-
+// TODO When the page loads, the coffees should be sorted by their ids in ascending order
 function renderCoffees(coffees) {
     var html = '';
-    for(var i = coffees.length - 1; i >= 0; i--) {
+    for(var i = 0; i < coffees.length; i++) { // var i = coffees.length - 1; i >= 0; i--
         html += renderCoffee(coffees[i]);
     }
     return html;
 }
+// Or coffees.reverse(); will do the ascending order also
 
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
@@ -47,11 +48,13 @@ var coffees = [
     {id: 13, name: 'Italian', roast: 'dark'},
     {id: 14, name: 'French', roast: 'dark'},
 ];
-
+// var coffeeName = document.querySelector("#coffees-name");
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+var submitButton = document.querySelector('#submit-button');
 var roastSelection = document.querySelector('#roast-selection');
 
 tbody.innerHTML = renderCoffees(coffees);
-
+// tbody.innerHTML = renderCoffee(coffeeName);
 submitButton.addEventListener('click', updateCoffees);
+roastSelection.addEventListener('change', updateCoffees);
+// 'change' input loses focus after it has been modified
