@@ -11,8 +11,6 @@
     <span class="border-bottom d-flex justify-content-center">
         <h1>Coffee!</h1>
     </span>
-
-
 <!--&lt;!&ndash; FORM element &ndash;&gt;-->
 <!--    <form>-->
 <!--        <label for="roast-selection"></label>-->
@@ -27,7 +25,6 @@
 <!--&lt;!&ndash;        <input id="submit" type="submit"/>&ndash;&gt;-->
 <!--        <button id="submit-button" type="submit-button" class="btn btn-primary">Submit</button>-->
 <!--    </form>-->
-
     <div class="mt-5 form-row">
         <div id="coffees" class="form-group col-md-6"></div>
         <!-- FORM element -->
@@ -36,6 +33,7 @@
                 <label for="roast-selection"></label>
                 <!-- Drop down SELECT element with 3 options -->
                 <select id="roast-selection">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
@@ -46,7 +44,25 @@
                 <button id="submit-button" type="submit-button" class="btn btn-primary">Submit</button>
             </form>
         </div>
+        <div id="coffees-add" class="form-group col-md-6"></div>
+        <!-- FORM element -->
+        <div class="form-group col-md-6"><h1>Add a Coffee</h1>
+            <form>
+                <label for="roast-selection"></label>
+                <!-- Drop down SELECT element with 3 options -->
+                <select id="roast-selection-add">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+                <label for="coffees-name">Coffee Name</label>
+                <input type="text" for="coffees-name" placeholder="coffee" id="coffees-name-add">
+                <!--        <input id="submit" type="submit"/>-->
+                <button id="submit-button-add" type="submit-button" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
+
 
     <script src="main.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
